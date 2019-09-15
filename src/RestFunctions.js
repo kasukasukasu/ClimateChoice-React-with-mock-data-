@@ -1,8 +1,6 @@
-//const url = 'http://localhost:8080/';
-//for local development
-// also add to package.json   "proxy": "http://localhost:8080",
+//const url = '/';
 
-const url = '/';
+const url = 'http://localhost:4000/';
 
 
 export function fetchall(callback) {

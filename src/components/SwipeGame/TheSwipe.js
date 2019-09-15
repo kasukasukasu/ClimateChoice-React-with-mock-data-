@@ -25,12 +25,17 @@ class TheSwipe extends Component {
 
     componentDidMount() {
         this.getAll();
-        this.getAllForCount();
     }
 
     getAll() {
-        fetchall(this.getAllRelations.bind(this))
+        fetchall(this.allFetched)
     }
+
+    //sets fetched tasks to this.state
+    allFetched = (data) => {
+    console.log(data, ' tuleeko kaikki data?')
+        this.setState({tasks: data});
+    };
 
     getAllRelations(datatasks) {
         fetchallchoices(this.allChoices.bind(this, datatasks))

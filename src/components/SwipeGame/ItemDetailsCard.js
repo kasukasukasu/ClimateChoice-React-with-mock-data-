@@ -59,7 +59,7 @@ class ItemDetailsCard extends Component {
                 <Card className="card-top">
                     <CardContent>
                         <h2>{task.title}</h2>
-                        <p>{task.content1}</p>
+                        <p>{task.body.content1}</p>
                     </CardContent>
                     <div>
                     <CardActions className={classes.actions} disableActionSpacing>
@@ -71,17 +71,17 @@ class ItemDetailsCard extends Component {
                     </CardActions>
                         <div className="buttons">
                             <button className="card-button pass"
-                                    onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0", task.rating)}>Ei</button>
+                                    onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "0", task.body.rating)}>Ei</button>
                             <button className="card-button like"
-                                    onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1", task.rating)}>Kyllä</button>
+                                    onClick={this.handleButtonClick.bind(this, this.props.user, task.id, "1", task.body.rating)}>Kyllä</button>
                         </div>
                     </div>
                     <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                         <CardContent>
                             <p className="cardContentHeader">Lisätietoja: </p>
-                            <p>{task.content2}</p>
+                            <p>{task.body.content2}</p>
                             <p className="cardContentHeader">Haasteen vaikuttavuus: </p>
-                            <p>-{task.rating}kg hiilidioksidipäästöjä vuodessa</p>
+                            <p>-{task.body.rating}kg hiilidioksidipäästöjä vuodessa</p>
                         </CardContent>
                     </Collapse>
                 </Card>
