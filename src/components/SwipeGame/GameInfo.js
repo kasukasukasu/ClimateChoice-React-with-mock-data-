@@ -11,7 +11,8 @@ class GameInfo extends Component {
                     <div className="container-fluid tausta-2">
                         {/*<div className="container text-center my-auto">*/}
                         <h1 className="header-header">Tervetuloa tekemään arjen ilmastovalintoja.</h1><br/>
-                        <h3 className="header-text">Peli antaa sinulle yksitellen arkipäivän haasteita.</h3><br/>
+                            <h3 className="header-text">Ohjeistus: </h3>
+                        <h3 className="header-text">Peli antaa sinulle yksitellen arkipäivän haasteita.</h3>
                         <h3 className="header-text">Valitse niistä kyllä tai ei.</h3><br/>
                         <Card className="infocard">
                             <CardContent>
