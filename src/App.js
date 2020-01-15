@@ -54,12 +54,12 @@ class App extends Component {
 
 
     initializeReactGA() {
-        ReactGA.initialize('UA-156286142-1C');
-        ReactGA.pageview('/homepage');
-        ReactGA.event({
-            category: 'Game',
-            action: 'Press start playing buttom'
-          });
+        ReactGA.initialize('UA-156286142-1');
+        history.listen((location) => {
+            ReactGA.set({ page: location.pathname });
+            ReactGA.pageview(location.pathname)
+          }
+        );
     }
 
 

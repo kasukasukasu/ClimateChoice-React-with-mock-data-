@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 
 // You need to import these to the wanted component
 // import {deleteTask} from "../Sandbox/SwipeFunctions/SwipeFunction";
@@ -20,6 +21,10 @@ class SwipeFunction extends Component{
     }
 
     deleteTask(id){
+        ReactGA.event({
+            category: 'Task',
+            action: 'Task delete',
+          });
         this.setState(prevState => ({
             tasks: prevState.tasks.filter(el => el != id )
         }));
