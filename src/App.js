@@ -20,9 +20,11 @@ import Header from "./components/Homepage/header";
 import Botti from "./components/Botti/Botti";
 import {Grid} from "react-bootstrap";
 import earth from "./resources/static/image/earth-outline-vector-clipart_10_1_50.png";
-import "./App.css"
 import NotFound from "./components/NotFound";
 import GameInfo from "./components/SwipeGame/GameInfo";
+import ReactGA from 'react-ga';
+
+import "./App.css"
 
 
 class App extends Component {
@@ -48,6 +50,16 @@ class App extends Component {
                 });
             }
         });
+    }
+
+
+    initializeReactGA() {
+        ReactGA.initialize('UA-156286142-1C');
+        ReactGA.pageview('/homepage');
+        ReactGA.event({
+            category: 'Game',
+            action: 'Press start playing buttom'
+          });
     }
 
 
