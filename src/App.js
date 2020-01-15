@@ -32,6 +32,7 @@ class App extends Component {
     state = { loading: true, authenticated: false, user: null };
 
     componentWillMount() {
+        this.initializeReactGA();
         app.auth().onAuthStateChanged(user => {
             if (user) {
                 var userid = user.uid;
@@ -55,7 +56,6 @@ class App extends Component {
 
     initializeReactGA() {
         ReactGA.initialize('UA-156286142-1');
-        ReactGA.pageview('/homepage')
         ReactGA.pageview('/')
     }
 
