@@ -1,3 +1,10 @@
+
+Site with a "tinder-like" functionality for climate actions
+
+🔥 Checkout at https://climate-choice.herokuapp.com/ 🔥 
+
+Ps. site-loading issues
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
